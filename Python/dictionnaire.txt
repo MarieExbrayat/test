@@ -1,0 +1,66 @@
+Machine Learning – Cours enrichi (OpenClassrooms – Régression logistique)
+
+1. Définition générale
+Machine Learning (Apprentissage automatique) : discipline de l’IA permettant à un algorithme d’apprendre à partir de données sans programmation explicite :contentReference[oaicite:1]{index=1}.
+
+2. Données et préparation
+- Données (Data) : observations brutes.
+- Features : variables explicatives (X1…XJ).
+- Label : variable cible Y (ici binaire 0/1).
+- Dataset : ensemble organisé.
+- Train/Test Split : séparation pour entraînement/test.
+- Prétraitement : nettoyage, gestion valeurs manquantes.
+
+3. Apprentissage supervisé
+- Supervised Learning : données étiquetées :contentReference[oaicite:2]{index=2}.
+- Classification : attribution d’une étiquette.
+- Régression : prédiction de valeurs continues.
+
+4. Régression logistique – introduction
+- Régression logistique (logit model) : modèle linéaire généralisé pour classification binaire :contentReference[oaicite:3]{index=3}.
+- Variable Y binaire, X explicatives.
+- Odds et log-odds : log(p/(1-p)) = b0 + b1·x1 + … + bJ·xJ.
+
+5. Fonction logistique
+- Probabilité : p(Y=1|X) = exp(b0 + Σ bj·xj) / (1 + exp(...)) :contentReference[oaicite:4]{index=4}.
+
+6. Estimation des coefficients
+- Maximum de vraisemblance (ML).
+- Tests d’hypothèses sur bj (H0: bj=0).
+- Statistique du rapport de vraisemblance → χ² :contentReference[oaicite:5]{index=5}.
+
+7. Évaluation du modèle
+- Matrice de confusion : vrai/faux positifs/négatifs, taux d’erreur :contentReference[oaicite:6]{index=6}.
+- Accuracy, précision, rappel, F1-score.
+- ROC / AUC (courbes de performance).
+
+8. Problèmes de performance
+- Overfitting / Underfitting : sur-/sous-apprentissage :contentReference[oaicite:7]{index=7}.
+- Cross-validation (k-fold, leave-one-out) pour validation :contentReference[oaicite:8]{index=8}.
+- Regularization (L1, L2) pour limiter l’overfitting :contentReference[oaicite:9]{index=9}.
+
+9. Biais et limites
+- Biais algorithmiques liés aux données :contentReference[oaicite:10]{index=10}.
+- Besoin de grandes quantités de données (≈10× ou 100× nombre de variables) :contentReference[oaicite:11]{index=11}.
+
+10. Interprétation des coefficients
+- Odds ratios, feature importance.
+- Sélection / redressement des variables :contentReference[oaicite:12]{index=12}.
+
+11. Cas pratique (bébés poids faible)
+- Exemple : prédire s’il y a un faible poids à la naissance.
+- Variables explicatives : FUME, PREM, HT, VISITE, AGE, PDSM, SCOL.
+- Interprétation des coefficients (FUME, PREM, HT néfastes; PDSM, SCOL positifs) :contentReference[oaicite:13]{index=13}.
+
+12. Déploiement du modèle
+- Seuil de décision : p>0,5 → Y=1.
+- Règle logit linéaire : b0 + Σ bj·xj > 0 :contentReference[oaicite:14]{index=14}.
+- Ajustement de la constante si échantillonnage biaisé :contentReference[oaicite:15]{index=15}.
+
+13. Suite du cours OpenClassrooms
+- Partie 2.4 : Partitionner avec K‑means.
+- Partie 3 : Feature engineering, PCA.
+- Partie 4 : Random Forest, boosting.
+
+
+Regression polynomiale : Lorsqu'on ajoute une puissance de l'une des variables dans la régression, on fait ce qu'on appelle une régression polynomiale.
